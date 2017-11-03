@@ -1,0 +1,27 @@
+while True:
+  month = input('\nEnter the month: ')
+  day   = int(input('Enter the day: '))
+  
+  x= ['jan','feb','march']
+  y= ['april','may','june']
+  z = ['july','aug','sep']
+  
+  if month in x:
+    season = 'winter'
+  elif month in y:
+    season = 'summer'
+  elif month in z:
+    season = 'spring'
+  else:
+    season = 'Autumn'
+    
+  if month == 'march' and day > 19:
+    season = 'spring'
+  elif month == 'june' and day > 24:
+    season = 'Autumn'
+  elif month == 'sep' and day > 23:
+    season = 'Winter'
+  else:
+    season = 'Summer'
+  
+  print("Now the season is {}".format(season))
